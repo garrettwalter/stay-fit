@@ -3,7 +3,7 @@ const Workout = require("../models/workout.js");
 const path = require("path");
 
 
-router.put('api/workouts/:_id', (req, res) => {
+router.post('api/workouts/:_id', (req, res) => {
     var id = ObjectId(req.params._id);
 
       Workout.updateOne({"_id": id}, (err, results) => {
